@@ -1,6 +1,9 @@
   rails -v 3.0.0.beta4
   Paperclip::VERSION 2.3.3
 
+== todo
+  authorization for photos CRUD
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
