@@ -1,0 +1,27 @@
+<div id="tsf-nav">
+  <div class="tsf-prev-month">
+    <%= link_to 'Previous', :controller=>'archives', :action=>'index', :year=>@tsfdate.prev_month.year, :month=>@tsfdate.prev_month.month %>
+  </div>
+  <div class="tsf-next-month">
+    <%= link_to 'Next', :controller=>'archives', :action=>'index', :year=>@tsfdate.next_month.year, :month=>@tsfdate.next_month.month %>
+  </div>
+  <div class="tsf-date">
+    <%= @tsfdate.strftime("%B") %>
+  </div>
+</div>
+<div id="tsf-calendar">
+  <%- (Date.new(@year,@month,01)..Date.new(@year + @month/12,(@month+1)%12,1)-1).each do |day| %>
+    <%- spl = day.to_formatted_s.split('-') %>
+    <%- sql = "\"" + spl[0] + "-" + spl[1] + "-" + spl[2] + "\"" %>
+    <%- photo = Photo.find_by_sql("SELECT * FROM photos WHERE day = #{sql}") %>
+    <div class="tsf-day">
+      <%- unless photo.first.nil? %>
+        <a rel="lightbox" href="<%= photo.first.image.url %>" class="365">
+          <img src="<%= photo.first.image.url(:medium) %>" />
+        </a>
+      <%- else %>
+        <%= spl[2] %>
+      <%- end %>
+    </div>
+  <%- end %>
+</div>

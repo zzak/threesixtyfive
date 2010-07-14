@@ -1,0 +1,71 @@
+* { margin: 0; padding: 0; }
+
+body {
+  font-family: sans-serif;
+  background: #4E4E4E;
+  color: #B7B7B7;
+}
+
+a img { border: none; }
+
+a:link, a:visited {
+  text-decoration: none;
+  color: #AAA;
+}
+a:hover, a:active {
+  color: #FFF;
+}
+
+.hidden { display: none; }
+
+#tsf-nav {
+  text-align: center;
+  width: 100%;
+  background: #2F2F2F;
+  height: 50px;
+}
+.tsf-prev-month {
+  float: left;
+}
+.tsf-next-month {
+  float: right;
+}
+#tsf-nav a {
+  width: 200px;
+  text-align: center;
+  padding: 30px 100px 0px 100px;
+  background: #161616;
+}
+.tsf-date {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 5px;
+}
+#tsf-calendar {
+  width: 1070px;
+  text-align: center;
+  margin: 0 auto;
+}
+.tsf-day {
+  width: 150px;
+  height: 150px;
+  float: left;
+  background: #151515;
+  color: #EEE;
+  border:1px solid #1A1A1A;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

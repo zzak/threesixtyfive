@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>threesixtyfive</title> 
+  <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'lightbox' %>
+  
+  <%= stylesheet_link_tag 'threesixtyfive' %>
+  <%= stylesheet_link_tag 'lightbox' %>
+  <%= csrf_meta_tag %>
+  <script type="text/javascript">
+    $(function() {
+	    $('a[@rel*=lightbox]').lightBox();
+    });
+  </script>
+</head> 
+<body>
+
+<%= yield %>
+
+</body>
+</html>
