@@ -1,4 +1,6 @@
 Threesixtyfive::Application.routes.draw do |map|
+  devise_for :users
+
   resources :photos
 
   match 'archives/:year/:month' => 'archives#index'
