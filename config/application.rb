@@ -42,5 +42,6 @@ module Threesixtyfive
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+    config.secret_token = '91bb84881384f5a9db7a79eb34844537c64e4936e4f93ce774371c92c2f7e0d9b65ca690b5540a524f21b33df04edc097db8642ec2bd814ed9617e05186c8bf9'
   end
 end
