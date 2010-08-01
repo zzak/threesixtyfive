@@ -56,7 +56,12 @@ a:hover, a:active {
   text-align: center;
 }
 
-
+form {
+  background: #FFF;
+  padding: 20px;
+  margin: 20px auto;
+  width: 400px;
+}
 
 
 
