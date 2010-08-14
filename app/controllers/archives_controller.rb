@@ -2,7 +2,6 @@ class ArchivesController < ApplicationController
   # GET /photos
   # GET /photos.xml
   def index
-    @photos = Photo.all
     unless params[:year].nil? && params[:month].nil?
       @year = params[:year].to_i
       @month = params[:month].to_i
@@ -11,6 +10,7 @@ class ArchivesController < ApplicationController
       @month = Time.now.month
     end
     @tsfdate = Date.new(@year, @month)
+    @photos = Photo.by_month(@month, :year=>@year, :field => :day)
   
 
     respond_to do |format|

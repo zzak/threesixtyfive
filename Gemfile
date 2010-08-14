@@ -1,11 +1,11 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.0.beta4'
+gem 'rails', '3.0.0.rc'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+#gem 'sqlite3-ruby', :require => 'sqlite3'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -17,7 +17,10 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 # gem 'ruby-debug'
 
 # Bundle the extra gems:
-gem 'devise', '1.1.rc0'
+gem 'devise', '1.1.rc2'
+gem 'paperclip', '2.3.3'
+gem 'by_star', '0.9.0'
+gem 'pg'
 # gem 'bj'
 # gem 'nokogiri', '1.4.1'
 # gem 'sqlite3-ruby', :require => 'sqlite3'
