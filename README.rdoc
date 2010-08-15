@@ -18,7 +18,10 @@ A photo-a-day application powered by Rails 3, devise, by_star, and paperclip.
   me = User.new(:email=>"myemailaddress", :password=>"mypassword")
   me.save
   
-  #now exit the console and fire up the server
+  #now exit the console and migrate the applications seed data
+	rake db:seed
+
+	# you're now free to fire up the server
   rails server
   
 View at: http://localhost:3000
