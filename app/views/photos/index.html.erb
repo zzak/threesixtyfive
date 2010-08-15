@@ -1,6 +1,9 @@
-<h1>Listing photos</h1>
+<h1>Photos</h1>
+<div id="options">
+  <%= link_to 'New Photo', new_photo_path %>
+</div>
 
-<table>
+<table cellspacing="0" cellpadding="0">
   <tr>
     <th>Title</th>
     <th>Day</th>
@@ -11,7 +14,7 @@
   </tr>
 
 <% @photos.each do |photo| %>
-  <tr>
+  <tr class="photoitem <%= cycle('odd', 'even') %>" valign="top">
     <td><%= photo.title %></td>
     <td><%= photo.day %></td>
     <td><%= image_tag photo.image.url(:thumb) %></td>
@@ -21,7 +24,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Photo', new_photo_path %>

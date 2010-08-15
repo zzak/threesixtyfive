@@ -1,15 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @link.title %>
-</p>
+<h1><%= link_to @link.title, @link.address %></h1>
+<div id="options">
+  <%= link_to 'Edit', edit_link_path(@link) %> |
+  <%= link_to 'Back', links_path %>
+</div>
 
 <p>
-  <b>Address:</b>
-  <%= @link.address %>
+  <%= image_tag(@link.icon.url) %>
 </p>
 
 
-<%= link_to 'Edit', edit_link_path(@link) %> |
-<%= link_to 'Back', links_path %>
+

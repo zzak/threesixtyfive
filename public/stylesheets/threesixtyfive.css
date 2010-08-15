@@ -7,16 +7,23 @@ body {
 }
 
 #header {
+  border-top: 5px solid #EEE;
+  background: #2F2F2F;
   clear: both;
   height: 130px;
 }
-#header h1 {
-  margin: 30px;
+#header img {
+  margin-left: 20px;
 }
 
-#header ul { clear: both; text-align: right; margin-top: 10px;}
+#header ul { clear: both; text-align: right; padding-top: 10px; }
 #header ul { list-style-type: none; }
 #header li { display: inline; margin-right: 5px; }
+#header ul a:link, #header ul a:visited {}
+#header ul a:hover, #header ul a:active {
+  border-bottom: 5px solid #1F1F1F;
+}
+#header .selected { border-bottom: 5px solid #1F1F1F; }
 
 a img { border: none; }
 
@@ -32,8 +39,9 @@ a:hover, a:active {
 
 #tsf-nav {
   text-align: center;
-  width: 100%;
-  background: #2F2F2F;
+  clear: both;
+  margin: 0 auto;
+  background: #1F1F1F;
   height: 50px;
 }
 .tsf-prev-month {
@@ -45,9 +53,13 @@ a:hover, a:active {
   width: 200px;
 }
 #tsf-nav a {
-  width: 200px;
+  padding: 15px 50px;
   text-align: center;
-  padding: 20px 100px 20px 100px;
+}
+#tsf-nav a:link, #tsf-nav a:visited {
+  background: #1F1F1F ;
+}
+#tsf-nav a:hover, #tsf-nav a:active {
   background: #161616;
 }
 
@@ -56,12 +68,14 @@ a:hover, a:active {
   font-weight: bold;
   padding-top: 5px;
 }
+
 #tsf-calendar {
-  width: 1070px;
+  width: 80%;
   text-align: center;
   margin: 0 auto;
 }
 .tsf-day {
+  margin: 10px;
   width: 150px;
   height: 150px;
   float: left;
@@ -71,12 +85,62 @@ a:hover, a:active {
   text-align: center;
 }
 
+#admin_content {
+  background: #FFF;
+  padding: 20px;
+  width: 85%;
+  margin: 0 auto;
+  color: #000;
+}
+#admin_content table {
+  width: 100%;
+}
+#admin_content td { padding: 5px; text-align: center; }
+#admin_content .even { background: #CFCFCF; }
+#admin_content a:link, #admin_content a:visited {
+  color: #3F3F3F;
+}
+#admin_content a:hover, #admin_content a:active {
+  color: #2F2F2F;
+}
+
+#admin_content #options {
+  background: #3F3F3F;
+  color: #EEE;
+  margin: 15px;
+  text-align: center;
+  padding: 10px;
+}
+#admin_content #options a {
+  padding: 10px 50px;
+}
+#admin_content #options a:link, #admin_content #options a:visited {
+  color: #FFF;
+}
+#admin_content #options a:hover, #admin_content #options a:active {
+  color: #EEE;
+}
+
 form {
   background: #FFF;
   padding: 20px;
   margin: 20px auto;
   width: 400px;
+  color: #000;
 }
+form input {
+  width: 100%;
+  margin: 5px;
+  font-size: 1.5em;
+}
+
+
+form select {
+  width: 30%;
+  font-size: 1.5em;
+  margin: 5px;
+}
+
 
 
 

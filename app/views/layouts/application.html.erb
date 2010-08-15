@@ -1,13 +1,36 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>threesixtyfive</title>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+<head> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+	<title>threesixtyfive</title> 
   <%= stylesheet_link_tag 'threesixtyfive' %>
   <%= csrf_meta_tag %>
-</head>
+</head> 
 <body>
 
+<div id="header">
+  <ul>
+    <% if controller_name == "photos" %>
+      <li class="selected"><%= link_to 'Photos', "/photos" %></li>
+    <% else %>
+      <li><%= link_to 'Photos', "/photos" %></li>
+    <% end %>
+    
+    <% if controller_name == "links" %>
+      <li class="selected"><%= link_to 'Links', "/links" %></li>
+    <% else %>
+      <li><%= link_to 'Links', "/links" %></li>
+    <% end %>
+  </ul>
+  
+  <%= link_to image_tag('logo.png'), "/" %>
+</div>
+
+<div id="admin_content">
 <%= yield %>
+</div>
 
 </body>
 </html>

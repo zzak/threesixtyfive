@@ -1,6 +1,9 @@
-<h1>Listing links</h1>
+<h1>Links</h1>
+<div id="options">
+  <%= link_to 'New Link', new_link_path %>
+</div>
 
-<table>
+<table cellspacing="0" cellpadding="0">
   <tr>
     <th>Title</th>
     <th>Address</th>
@@ -11,7 +14,7 @@
   </tr>
 
 <% @links.each do |link| %>
-  <tr>
+  <tr class="linkitem <%= cycle('odd', 'even') %>" valign="top">
     <td><%= link.title %></td>
     <td><%= link.address %></td>
     <td><%= image_tag(link.icon.url(:small)) %></td>
@@ -21,7 +24,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Link', new_link_path %>
