@@ -1,9 +1,12 @@
 Threesixtyfive::Application.routes.draw do |map|
+  resources :links
+
   devise_for :users
 
   resources :photos
 
   match 'archives/:year/:month' => 'archives#index'
+  match '/photo/:id' => 'archives#photo'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -6,6 +6,18 @@ body {
   color: #B7B7B7;
 }
 
+#header {
+  clear: both;
+  height: 130px;
+}
+#header h1 {
+  margin: 30px;
+}
+
+#header ul { clear: both; text-align: right; margin-top: 10px;}
+#header ul { list-style-type: none; }
+#header li { display: inline; margin-right: 5px; }
+
 a img { border: none; }
 
 a:link, a:visited {
@@ -26,16 +38,19 @@ a:hover, a:active {
 }
 .tsf-prev-month {
   float: left;
+  width: 200px;
 }
 .tsf-next-month {
   float: right;
+  width: 200px;
 }
 #tsf-nav a {
   width: 200px;
   text-align: center;
-  padding: 30px 100px 0px 100px;
+  padding: 20px 100px 20px 100px;
   background: #161616;
 }
+
 .tsf-date {
   font-size: 30px;
   font-weight: bold;
@@ -62,6 +77,9 @@ form {
   margin: 20px auto;
   width: 400px;
 }
+
+
+
 
 
 

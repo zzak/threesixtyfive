@@ -14,7 +14,7 @@
   <% unless @photos.nil? %>
     <% @photos.each do |photo| %>
       <div class="tsf-day">
-        <a rel="lightbox[archive]" href="<%= photo.image.url %>" class="365" title="<%= photo.title %> <%= photo.day %>">
+        <a class="colorbox" href="/photo/<%= photo.id %>" class="365" title="<%= photo.title %> <%= photo.day %>">
           <img alt="<%= photo.title %> <%= photo.day %>" src="<%= photo.image.url(:medium) %>" />
         </a>
       </div>

@@ -5,19 +5,30 @@
 <head> 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 	<title>threesixtyfive</title> 
-  <%= javascript_include_tag 'jquery' %>
-  <%= javascript_include_tag 'lightbox' %>
-  
-  <%= stylesheet_link_tag 'threesixtyfive' %>
-  <%= stylesheet_link_tag 'lightbox' %>
+  <%= stylesheet_link_tag 'threesixtyfive', 'colorbox' %>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+  <%= javascript_include_tag 'jquery.colorbox-min.js' %>
   <%= csrf_meta_tag %>
   <script type="text/javascript">
     $(function() {
-	    $('a[@rel*=lightbox]').lightBox();
+	    $('.colorbox').colorbox();
     });
   </script>
 </head> 
 <body>
+
+<div id="header">
+
+  <% unless @links.nil? %>
+  <ul>
+    <% @links.each do |link| %>
+      <li><%= link_to image_tag(link.icon.url(:small)), link.address %></li>
+    <% end %>
+  </ul>
+  <% end %>
+  
+  <h1>threesixtyfive</h1>
+</div>
 
 <%= yield %>
 
