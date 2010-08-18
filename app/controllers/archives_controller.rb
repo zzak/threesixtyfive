@@ -24,8 +24,21 @@ class ArchivesController < ApplicationController
     @photo = Photo.find(params[:id])
     
     respond_to do |format|
-      format.html { render :layout => false }
-      
+      format.html { render :layout => 'photo' }
     end
+  end
+  
+  def tag
+    @photos = Photo.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 20)
+    @links = Link.all
+    
+    respond_to do |format|
+      format.html
+    end
+  end
+  
+  def tags
+    @tags = Photo.tag_counts_on(:tags)
+    @links = Link.all
   end
 end

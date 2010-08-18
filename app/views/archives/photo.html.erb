@@ -1,3 +1,12 @@
 <h1><%= @photo.title %></h1>
 <p><%= @photo.day %></p>
+<% unless @photo.tag_list.nil? %>
+  <h3>tags</h3>
+  <ul id="tagslist">
+  <% @photo.tags.each do |tag| %>
+    <li><%= link_to tag, "/tag/#{tag}" %></li>
+  <% end %>
+  </ul>
+<% end %>
 <%= image_tag @photo.image.url %>
+

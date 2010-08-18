@@ -7,6 +7,8 @@ Threesixtyfive::Application.routes.draw do |map|
 
   match 'archives/:year/:month' => 'archives#index'
   match '/photo/:id' => 'archives#photo'
+  match '/tags' => 'archives#tags'
+  match '/tag/:tag' => 'archives#tag'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -4,7 +4,7 @@ class LinksController < ApplicationController
   # GET /links
   # GET /links.xml
   def index
-    @links = Link.all
+    @links = Link.paginate :page => params[:page], :order => 'updated_at DESC'
 
     respond_to do |format|
       format.html # index.html.erb

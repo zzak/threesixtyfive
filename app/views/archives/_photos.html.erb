@@ -1,0 +1,7 @@
+<% @photos.each do |photo| %>
+  <div class="tsf-day">
+    <a class="colorbox" href="/photo/<%= photo.id %>" class="365">
+      <img alt="<%= photo.title %> <%= photo.day %>" src="<%= photo.image.url(:medium) %>" />
+    </a>
+  </div>
+<% end %>

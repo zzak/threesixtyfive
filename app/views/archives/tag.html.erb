@@ -1,0 +1,6 @@
+<% unless @photos.nil? %>
+  <%= render :partial => "photos" %>
+<% end %>
+
+
+<%= will_paginate @photos %>
